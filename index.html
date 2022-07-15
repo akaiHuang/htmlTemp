@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+  <head>
+    <!--mobileControl-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=640" />
+    <!--jsSetting-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/jquery.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/easing/EasePack.min.js"></script>
+    <script async src="//www.youtube.com/iframe_api"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./lib/effect-carousel.min.js"></script>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <!--jsControl-->
+    <script src="_js/global.js"></script>
+    <script src="_js/module.js"></script>
+    <script src="_js/view.js"></script>
+    <script src="_js/app.js"></script>
+    <!--css-->
+    <link href="_css/style.css" rel="stylesheet" type="text/css" />
+    <!--fbMata-->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <title>INFINItI QX60</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-44RHP1LN5K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-44RHP1LN5K');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W9DKKJH');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <!-- 媒體追蹤碼1 -->
+    <script id="ret-js-template" type="text/javascript">
+      var retUrlPrefix="//a.amnet.tw/tracking/";
+      var retCert="028957631dc83a6db7084f6a20de2a00";
+      var retSiteId=109;
+  
+      (function(w, d, s, n) {
+          if(w.RET){
+              return;
+          }
+          var r = w.RET || (w.RET = {});
+          r[n] = r[n] || function () {
+              (r[n].q = r[n].q || []).push(arguments)
+          }, r[n].q = [], r[n].l = 1 * new Date();
+  
+          var ret = d.createElement('script');
+          ret.type = 'text/javascript';
+          ret.async = true;
+          ret.src = retUrlPrefix + 'ret.js?' + ( Math.floor(new Date().getTime() / 100000) );
+          var currentJs = d.getElementById('ret-js-template');
+          currentJs.parentNode.insertBefore(ret, currentJs);
+      })(window, document, 'script', 'tracking');
+  </script>
+
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9DKKJH"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <head>
+      <div class="logoBar">
+        <img class="logo" src="./_img/logoimg.png" alt="logo image" />
+      </div>
+    </head>
+    <!-- 進度條 -->
+    <div class="wizardContainer">
+      <ul class="wizard">
+        <li><div class="wizard_Dot dot1 dotCheck"></div></li>
+        <li><div class="wizard_Dot dot2"></div></li>
+        <li><div class="wizard_Dot dot3"></div></li>
+        <li><div class="wizard_Dot dot4"></div></li>
+        <li class="lastStyle"><div class="wizard_Dot"></div></li>
+      </ul>
+      <ul class="wizardBG">
+        <li><div class="wizard_DotBG"></div></li>
+        <li><div class="wizard_DotBG"></div></li>
+        <li><div class="wizard_DotBG"></div></li>
+        <li><div class="wizard_DotBG"></div></li>
+        <li class="lastStyle"><div class="wizard_DotBG"></div></li>
+      </ul>
+      <div class="pline"></div>
+      <div class="plineBG"></div>
+    </div>
+          <!-- 感謝 -->
+    <div class="thanks">
+        <div class="thankBG">
+            <div class="thankTitle"><img src="./_img/thanks.png" alt=""></div>
+        </div>
+          <div class="blockBGThanks"></div>
+    </div>
+
+    <!-- 4.車色單元 -->
+    <div class="section4">
+
+      <!-- 4.車色單元填寫回函 -->
+      <div class="formContainer">
+        <div class="formBG">
+          <div class="closeBtnform"></div>
+          <div class="formTitle">留下聯絡方式，預約鑑賞 QX60</div>
+          <input type="text" class="yourName" placeholder="姓名：" /><br />
+          <input
+            type="tel"
+            class="yourPhone"
+            placeholder="聯絡電話："
+            maxlength="10"
+          /><br />
+          <select name="dealer" class="dealer pretty-select">
+            <option value="">選擇展示中心</option>
+            <option value="松江展示中心">
+              松江展示中心 台北市中山區松江路373號
+            </option>
+            <option value="內湖展示中心">
+              內湖展示中心 台北市內湖區行忠路52號
+            </option>
+            <option value="新莊展示中心">
+              新莊展示中心 新北市新莊區思源路40-1號
+            </option>
+            <option value="桃園展示中心">
+              桃園展示中心 桃園市八德區中華路258號
+            </option>
+            <option value="新竹展示中心">
+              新竹展示中心 新竹市東區中華路一段257-2號
+            </option>
+            <option value="台中展示中心">
+              台中展示中心 台中市西屯區市政路1號
+            </option>
+            <option value="彰化展示中心">
+              彰化展示中心 彰化縣花壇鄉中山路一段230號
+            </option>
+            <option value="台南展示中心">
+              台南展示中心 台南市永康區中正南路308號
+            </option>
+            <option value="高雄展示中心">
+              高雄展示中心 高雄市前鎮區一心一路356號
+            </option>
+          </select>
+          <div class="formnBtn">
+            送&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出
+            <div class="arrIcon"></div>
+          </div>
+        </div>
+        <div class="blockBGform"></div>
+      </div>
+
+      <!-- 4.車色單元卡牌 -->
+      <div class="pickColored">
+        <div class="colorCard">
+          <div class="closeBtn"></div>
+          <div class="iWantThisColor pickedColor1" style="display:none"></div>
+          <div class="iWantThisColor pickedColor2" style="display:none"></div>
+          <div class="iWantThisColor pickedColor3" style="display:none"></div>
+          <div class="iWantThisColor pickedColor4" style="display:none"></div>
+          <div class="iWantThisColor pickedColor5" style="display:none"></div>
+          <div class="iWantThisColor pickedColor6" style="display:none"></div>
+        </div>
+        <div class="blockBG"></div>
+      </div>
+
+      <!-- 4.車色UI -->
+      <div class="s4Screne1">
+        <div class="scUIcon">
+          <div class="sc4title"></div>
+          <div class="sc4subtitle"></div>
+          <ul class="colorUI">
+            <li class="colorBtn1"></li>
+            <li class="colorBtn2"></li>
+            <li class="colorBtn3"></li>
+            <li class="colorBtn4"></li>
+            <li class="colorBtn5"></li>
+            <li class="colorBtn6 lastStyle"></li>
+          </ul>
+          <div class="sc4nextBtn">
+            開始探索
+            <div class="arrIcon"></div>
+          </div>
+        </div>
+        <!-- 4.車 -->
+        <div class="colorName"></div>
+        <div class="colorCar"></div>
+        <div class="colorBG"></div>
+      </div>
+    </div>
+    <!-- 3.影片單元 -->
+    <div class="section3">
+      <div class="sc3title"></div>
+      <div class="sc3subtitle"></div>
+      <div class="sc3video">
+        <div class="videoIcon"></div>
+        <div class="videoMask"></div>
+        <div class="videoMaskTrans"></div>
+        <!-- <div class="videoContent"></div> -->
+        <div id="YTvideoSC3"></div>
+      </div>
+      <div class="sc3nextBtn">
+        了解車色
+        <div class="arrIcon"></div>
+      </div>
+    </div>
+    <!-- 2.卡牌選則 -->
+    <div class="section2">
+      <div class="swiper forRwd">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slider_f1 ">
+            <img src="./_img/bf1.png" />
+          </div>
+          <div class="swiper-slide slider_f2 ">
+            <img src="./_img/bf2.png" />
+          </div>
+          <div class="swiper-slide slider_f3 ">
+            <img src="./_img/bf3.png" />
+          </div>
+        </div>
+        <div class="swiper-button-prev"><div class="prev_text"></div></div>
+        <div class="swiper-button-next"><div class="next_text"></div></div>
+      </div>
+
+
+      <div class="swiper forRwdM">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slider_f1_m ">
+            <img src="./_img/bf1_m.png" />
+          </div>
+          <div class="swiper-slide slider_f2_m ">
+            <img src="./_img/bf2_m.png" />
+          </div>
+          <div class="swiper-slide slider_f3_m ">
+            <img src="./_img/bf3_m.png" />
+          </div>
+        </div>
+      <div class="swiper-button-prev"><div class="prev_text"></div></div>
+      <div class="swiper-button-next"><div class="next_text"></div></div>
+    </div>
+
+
+      <div class="nextbtn fBtn1" style="display:none"> 深入了解
+        <div class="arrIconB"></div>
+      </div>
+      <div class="nextbtn fBtn2" style="display:none"> 深入了解
+        <div class="arrIconB"></div>
+      </div>
+      <div class="nextbtn fBtn3" style="display:none"> 深入了解
+        <div class="arrIconB"></div>
+      </div>
+      <div class="blockBG"></div>
+    </div>
+    <!-- 1.初始卡牌 -->
+    <div class="section1">
+      <div class="sc1_banner">
+        <div class="sc1VideoBanner">
+        <div id="videoBanner"></div>
+      </div>
+
+        <div class="sction1Title">
+          <br />
+          載著家人，你最擔心的是？</span>
+          <!-- &nbsp;&nbsp;&nbsp;&nbsp;什麼樣的<span class="sction1Keytext"
+            >寵愛</span> -->
+        </div>
+        <!-- 1.初始卡牌mobilie -->
+        <ul class="sc1_cardContainer_mobile">
+          <div class="swiper-wrapper">
+            <li class="f1 btnStyle flip_container swiper-slide">
+              <div class="card">
+                <div class="front"></div>
+                <!-- <div class="back">
+                  <div class="playBtn"></div>
+                </div> -->
+              </div>
+            </li>
+            <li class="f2 btnStyle flip_container swiper-slide">
+              <div class="card">
+                <div class="front"></div>
+                <!-- <div class="back">
+                  <div class="playBtn"></div>
+                </div> -->
+              </div>
+            </li>
+            <li class="f3 btnStyle flip_container lastStyle swiper-slide">
+              <div class="card">
+                <div class="front"></div>
+                <!-- <div class="back">
+                  <div class="playBtn"></div>
+                </div> -->
+              </div>
+            </li>
+          </div>
+        </ul>
+        <!-- 1.初始卡牌desktop -->
+        <ul class="sc1_cardContainer">
+          <li class="f1 btnStyle flip_container">
+            <div class="card">
+              <div class="front"></div>
+              <!-- <div class="back">
+                <div class="playBtn"></div>
+              </div> -->
+            </div>
+          </li>
+          <li class="f2 btnStyle flip_container">
+            <div class="card">
+              <div class="front"></div>
+              <!-- <div class="back">
+                <div class="playBtn"></div>
+              </div> -->
+            </div>
+          </li>
+          <li class="f3 btnStyle flip_container lastStyle">
+            <div class="card">
+              <div class="front"></div>
+              <!-- <div class="back">
+                <div class="playBtn"></div>
+              </div> -->
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- mobilie使用說明 -->
+    <div class="mobileIntro">
+        <div class="closeIntroBtn"></div>
+        <div class="mobileIntroText">請「左右滑動」並<br/>「點擊」您的選擇</div>
+        <div class="mobileIntroIcon"></div>
+      <div class="blockBG_m"></div>
+    </div>
+    <!-- <footer>
+      <div class="footerInfo">
+        INFINITI誠摯邀您，線上填寫賞車表單<br />
+        將有專人與您聯繫並安排賞車，或撥打免付費服務專線，由專人為您預約。<br />
+        0800-333-399<br />
+      </div>
+      <div class="footerBlock">
+       <div class="ftinfo">© INFINITI 2022 &nbsp;&nbsp;&nbsp;The All New QX60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      </div>
+    </footer> -->
+  </body>
+</html>
