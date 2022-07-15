@@ -26,6 +26,9 @@ var section1Event = {
         sw = $(window).width()
         if(sw<=640){
           swipeEvent.mobileIndex()
+          gtag('event', '手機首頁載入', { 'event_category': 'Click', 'event_label': '網站載入', 'value': 500 });
+        }else{
+          gtag('event', '桌機首頁載入', { 'event_category': 'Click', 'event_label': '網站載入', 'value': 500 });
         }
         clickEvent.section1()
        
@@ -55,18 +58,18 @@ var clickEvent = {
                 // TweenMax.to($(".btn1"),0.1, { scale: 1.1,onComplete:function(){
                 //     TweenMax.to($(".btn1"),0.1, { scale: 1});
                 // } });
-                gtag('event', '首頁點擊豪華', { 'event_category': 'Click', 'event_label': '第一選項', 'value': 500 });
+                gtag('event', '首頁點擊無聊', { 'event_category': 'Click', 'event_label': '第一步驟', 'value': 500 });
             }else{
                 checkWitchCard = $.inArray("btn2",e.currentTarget.classList)
                 if(checkWitchCard != -1){
                     firstPick = 2
-                    gtag('event', '首頁點擊安全', { 'event_category': 'Click', 'event_label': '第一選項', 'value': 500 });
+                    gtag('event', '首頁點擊塞車', { 'event_category': 'Click', 'event_label': '第一步驟', 'value': 500 });
                     // TweenMax.to($(".btn2"),0.1, { scale: 1.1,onComplete:function(){
                     //     TweenMax.to($(".btn2"),0.1, { scale: 1});
                     // } });
                 }else{
                     firstPick = 3
-                    gtag('event', '首頁點擊空間', { 'event_category': 'Click', 'event_label': '第一選項', 'value': 500 });
+                    gtag('event', '首頁點擊擁擠', { 'event_category': 'Click', 'event_label': '第一步驟', 'value': 500 });
                     // TweenMax.to($(".btn3"),0.1, { scale: 1.1,onComplete:function(){
                     //     TweenMax.to($(".btn3"),0.1, { scale: 1});
                     // } });
@@ -192,15 +195,20 @@ var section2Event = {
             switch (now) {
                 case 1:  
                   console.log('第二個選擇的特色：豪華')
-                  sendDataArray[1] = '豪華'
+                  gtag('event', '第二頁面選擇專於美豪華', { 'event_category': 'Click', 'event_label': '第二步驟', 'value': 500 });
+
+                  sendDataArray[1] = '專於美豪華'
                   break;
                 case 2:
                     console.log('第二個選擇的特色：安全')
-                    sendDataArray[1] = '安全'
+                    gtag('event', '第二頁面選擇信於智安全', { 'event_category': 'Click', 'event_label': '第二步驟', 'value': 500 });
+                    
+                    sendDataArray[1] = '信於智安全'
                   break;
                 case 3:
                     console.log('第二個選擇的特色：空間')
-                    sendDataArray[1] = '空間'
+                    gtag('event', '第二頁面選擇嘆於境空間', { 'event_category': 'Click', 'event_label': '第二步驟', 'value': 500 });
+                    sendDataArray[1] = '嘆於境空間'
                   break;
                 default:
                   break;
@@ -482,7 +490,7 @@ var section3Event = {//section3Event.getYT()
             //console.log(sc3_player.getCurrentTime())
             timer = sc3_player.getCurrentTime()
             if(timer>10 && timer <11){
-                console.log('checkPoint:10s')
+                //console.log('checkPoint:10s')
                 checkpoint_1 = true
                 $.ajax({
                   type: "get",
@@ -491,9 +499,11 @@ var section3Event = {//section3Event.getYT()
                     console.log('check1')
                   }
                 });
+                gtag('event', '觀看影片25%', { 'event_category': 'Click', 'event_label': '第三步驟', 'value': 500 });
+
             }
             if(timer>20 && timer <21){
-                console.log('checkPoint:20s')
+                //console.log('checkPoint:20s')
                 checkpoint_2 = true
                 $.ajax({
                   type: "get",
@@ -502,9 +512,10 @@ var section3Event = {//section3Event.getYT()
                     console.log('check1')
                   }
                 });
+                gtag('event', '觀看影片50%', { 'event_category': 'Click', 'event_label': '第三步驟', 'value': 500 });
             }
             if(timer>30 && timer <31){
-                console.log('checkPoint:30s')
+                //console.log('checkPoint:30s')
                 checkpoint_3 = true
                 $.ajax({
                   type: "get",
@@ -513,9 +524,10 @@ var section3Event = {//section3Event.getYT()
                     console.log('check1')
                   }
                 });
+                gtag('event', '觀看影片75%', { 'event_category': 'Click', 'event_label': '第三步驟', 'value': 500 });
             }
             if(timer>39 && timer <40){
-              console.log('checkPoint:40s')
+              //console.log('checkPoint:40s')
               checkpoint_4 = true
               $.ajax({
                 type: "get",
@@ -524,6 +536,7 @@ var section3Event = {//section3Event.getYT()
                   console.log('check1')
                 }
               });
+              gtag('event', '觀看影片100%', { 'event_category': 'Click', 'event_label': '第三步驟', 'value': 500 });
           }
           }, 100);
           //clearInterval(countingTime);
@@ -573,6 +586,7 @@ var section4Event = {
                 $('.pickedColor4').css('display','none')
                 $('.pickedColor5').css('display','none')
                 $('.pickedColor6').css('display','none')
+                gtag('event', '點擊顏色-日冕金', { 'event_category': 'Click', 'event_label': '第四步驟', 'value': 500 });
                 break;
                 case 2:
                   $('.pickedColor1').css('display','none')
@@ -581,6 +595,7 @@ var section4Event = {
                   $('.pickedColor4').css('display','none')
                   $('.pickedColor5').css('display','none')
                   $('.pickedColor6').css('display','none')
+                  gtag('event', '點擊顏色-月雲藍', { 'event_category': 'Click', 'event_label': '第四步驟', 'value': 500 });
                   break;
                   case 3:
                 $('.pickedColor1').css('display','none')
@@ -589,6 +604,7 @@ var section4Event = {
                 $('.pickedColor4').css('display','none')
                 $('.pickedColor5').css('display','none')
                 $('.pickedColor6').css('display','none')
+                gtag('event', '點擊顏色-湛海藍', { 'event_category': 'Click', 'event_label': '第四步驟', 'value': 500 });
                 break;
                 case 4:
                 $('.pickedColor1').css('display','none')
@@ -597,6 +613,7 @@ var section4Event = {
                 $('.pickedColor4').css('display','')
                 $('.pickedColor5').css('display','none')
                 $('.pickedColor6').css('display','none')
+                gtag('event', '點擊顏色-晨曦白', { 'event_category': 'Click', 'event_label': '第四步驟', 'value': 500 });
                 break;
                 case 5:
                 $('.pickedColor1').css('display','none')
@@ -605,6 +622,7 @@ var section4Event = {
                 $('.pickedColor4').css('display','none')
                 $('.pickedColor5').css('display','')
                 $('.pickedColor6').css('display','none')
+                gtag('event', '點擊顏色-銀雪灰', { 'event_category': 'Click', 'event_label': '第四步驟', 'value': 500 });
                 break;
                 case 6:
                 $('.pickedColor1').css('display','none')
@@ -613,6 +631,7 @@ var section4Event = {
                 $('.pickedColor4').css('display','none')
                 $('.pickedColor5').css('display','none')
                 $('.pickedColor6').css('display','')
+                gtag('event', '點擊顏色-曜石黑', { 'event_category': 'Click', 'event_label': '第四步驟', 'value': 500 });
                 break;
             
               default:
@@ -714,6 +733,8 @@ var thankPageEvent = {
   go:function(){
     $(".thanks").css('display','')
     TweenMax.to($(".thanks"), 1, { autoAlpha: 1 });
+    gtag('event', '送出表單', { 'event_category': 'Click', 'event_label': '第五步驟', 'value': 500 });
+    apiEvent.ini()
   }
 }
 var iniBGVideo = {//iniBGVideo.getYT()
@@ -773,11 +794,12 @@ var apiEvent = {//apiEvent.ini()
     
     $.ajax({
       type: "post",
-      url: "https://infinitievent.com.tw/api/public/insertData",
-      data: "data",
+      url: "https://www.infinitievent.com.tw/api/public/insertData",
+      data: sendData,
       dataType: "json",
       success: function (res) {
         console.log(res)
+        gtag('event', '完成表單', { 'event_category': 'Click', 'event_label': '第六步驟', 'value': 500 });
       }
     });
   }
